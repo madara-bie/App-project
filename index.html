@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../app-project/src/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row-1-3">
+            <div class="col-1-3">
+                <h1>
+                    Weather in <p class="location" id="location"></p>
+                    <img src="../app-project/img/sun.png" alt="Currently Sunny" class="main-icon"><br>
+                    <p class="main-degree" id="current-temp"></p>
+                    <button id="show-current" class="btn btn-primary current-button">Current location</button>
+                </h1>
+            </div>
+        </div>
+        <div class="row-2-3">
+            <div class="col-2-3">
+                <div>
+                    <form id="search-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="input-city" aria-describedby="emailHelp"
+                                placeholder="Which city are You looking for?">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="search-btn">Search</button>
+                    </form>
+                </div>
+                <div class="extra-info">
+                    <p class="current-time">It is Tuesday 16:00</p>
+                </div>
+                <div class="week">
+                    <ul>
+                        <li class="col-sm col-2-3-1">
+                            <p class="days">Monday</p>
+                            <img src="../app-project/img/cloudy.png" alt="Rainy Day" class="small-icons">
+                            <p class="degrees">+23°C</p>
+                        </li>
+                        <li class="col-sm col-2-3-2">
+                            <p class="days">Tuesday</p>
+                            <img src="../app-project/img/cloud.png" alt="Cloudy" class="small-icons">
+                            <p class="degrees">+21°C</p>
+                        </li>
+                        <li class="col-sm col-2-3-3">
+                            <p class="days">Wednesday</p>
+                            <img src="../app-project/img/storm.png" alt="Thunder" class="small-icons">
+                            <p class="degrees">+19°C</p>
+                        </li>
+                        <li class="col-sm col-2-3-4">
+                            <p class="days">Thursday</p>
+                            <img src="../app-project/img/cloudy.png" alt="Mostly Sunny" class="small-icons">
+                            <p class="degrees">+25°C</p>
+                        </li>
+                        <li class="col-sm col-2-3-5">
+                            <p class="days">Friday</p>
+                            <img src="../app-project/img/sun.png" alt="Sunny" class="small-icons">
+                            <p class="degrees">+28°C</p>
+                        </li>
+                    </ul>
+                </div>                    
+            </div>
+        </div>
+    </div>
+    <script src="../app-project/src/index.js"></script>
+</body>
+</html>
