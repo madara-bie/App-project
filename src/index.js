@@ -10,6 +10,7 @@ function showCity(event) {
 }
 
 function showTemperature(response) {
+  console.log(response);
   let currentTemp = document.querySelector("#current-temp");
   let roundedTemp = Math.round(response.data.main.temp);
   currentTemp.innerHTML = `${roundedTemp}°C`;
