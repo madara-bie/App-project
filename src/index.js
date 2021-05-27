@@ -15,6 +15,9 @@ function showTemperature(response) {
   let roundedTemp = Math.round(response.data.main.temp);
   currentTemp.innerHTML = `${roundedTemp}°C`;
   updateCityName(response.data.name);
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/10d@2x.png`);
 }
 
 function searchCity(city) {
