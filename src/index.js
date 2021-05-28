@@ -12,12 +12,14 @@ function showCity(event) {
 function showTemperature(response) {
   console.log(response);
   let currentTemp = document.querySelector("#current-temp");
-  let roundedTemp = Math.round(response.data.main.temp);
+  let roundedTemp = Math.round(celsiusTemperature);
   currentTemp.innerHTML = `${roundedTemp}°C`;
   updateCityName(response.data.name);
   let iconElement = document.querySelector("#icon");
 
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/10d@2x.png`);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -59,16 +61,19 @@ function updateCurrentTime() {
 
 function showFahrenheitTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (14 * 9) / 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#current-temp");
-  temperatureElement.innerHTML = fahrenheitTemperature;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-searchCity("London");
-updateCurrentTime();
+let celsiusTemperature = null;
+
 
 document.querySelector("#show-current").addEventListener("click", showCurrentLocation);
 document.querySelector("#search-form").addEventListener("submit", showCity);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+searchCity("London");
+updateCurrentTime();
