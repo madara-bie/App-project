@@ -57,8 +57,16 @@ function updateCurrentTime() {
   document.querySelector(".current-time").innerHTML = `Currently it is  ${dayOfWeek}, ${hour}:${minute}`;
 }
 
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  alert("Link Clicked");
+}
+
 searchCity("London");
 updateCurrentTime();
 
 document.querySelector("#show-current").addEventListener("click", showCurrentLocation);
 document.querySelector("#search-form").addEventListener("submit", showCity);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
