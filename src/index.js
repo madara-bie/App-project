@@ -17,7 +17,7 @@ function showTemperature(response) {
   updateCityName(response.data.name);
   let iconElement = document.querySelector("#icon");
 
-  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/10d@2x.png`);
+  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/10d@2x.png`);
 }
 
 function searchCity(city) {
