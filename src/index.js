@@ -17,7 +17,7 @@ function showTemperature(response) {
   updateCityName(response.data.name);
   let iconElement = document.querySelector("#icon");
 
-  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/10d@2x.png`);
+  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
   celsiusTemperature = response.data.main.temp;
 }
