@@ -61,7 +61,7 @@ function showFahrenheitTemperature(event) {
   event.preventDefault();
   let fahrenheitTemperature = (14 * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
-  let temperatureElement.innerHTML = fahrenheitTemperature;
+  temperatureElement.innerHTML = fahrenheitTemperature;
 }
 
 searchCity("London");
