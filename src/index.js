@@ -19,17 +19,18 @@ function showTemperature(response) {
   let description = document.querySelector("#description");
   let windSpeed = document.querySelector("#wind-speed");
   let precipitation = document.querySelector("#precipitation");
-  let smallIcons = document.querySelectorAll(".small-icons");
 
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt=description);
-  smallIcons.setAttribute("src", `https://openweathermap.org/img/wn/10d@2x.png`);
-
+  
   celsiusTemperature = response.data.main.temp;
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
   windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 
 }
+let smallIcons = document.querySelectorAll(".small-icons");
+smallIcons.setAttribute("src", `https://openweathermap.org/img/wn/10d@2x.png`);
+
 
 function searchCity(city) {
   let apiId = "d547f7175aa4839fd00918dad2121b28";
