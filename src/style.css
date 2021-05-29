@@ -39,6 +39,11 @@ h1 .current-button:hover {
     margin-left: 80px;
     background-color: transparent;
 }
+h1 .current-button:active {
+    background-color: transparent;
+    font-size: 1.05rem;
+    color: rgb(165, 159, 247);
+}
 
 .main-icon {
     width: 140px;
