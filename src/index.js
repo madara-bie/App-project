@@ -24,8 +24,8 @@ function showTemperature(response) {
 
   celsiusTemperature = response.data.main.temp;
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
-  windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}`;
-  precipitation.innerHTML = `Humidity: ${response.data.main.humidity}`;
+  windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
+  precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 }
 
 function searchCity(city) {
