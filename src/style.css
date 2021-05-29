@@ -29,14 +29,14 @@ h1 .current-button:hover {
     color: rgb(90, 88, 112);
     display: flex;
     float: left;
-    margin-left: 70px;
+    margin-left: 55px;
 }
 h1 .current-button:hover {
     color: rgb(165, 159, 247);
     font-size: 1.05rem;
     font-weight: 500;
     transition: all 0.2s ease;
-    margin-left: 68px;
+    margin-left: 53px;
     background-color: transparent;
 }
 h1 .current-button:active {
