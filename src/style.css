@@ -102,8 +102,10 @@ button {
     display: flex;
     float: right;
 }
-.extra-info p {
-    margin-top: 10px;
+.weather-description
+.wind-speed
+.percipitation {
+    margin-top: 5px;
     font-size: 15px;
     font-weight: 300;
 }
