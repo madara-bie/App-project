@@ -16,10 +16,16 @@ function showTemperature(response) {
   currentTemp.innerHTML = `${roundedTemp}°C`;
   updateCityName(response.data.name);
   let iconElement = document.querySelector("#icon");
+  let description = document.querySelector("#description");
+  let windSpeed = document.querySelector("#wind-speed");
+  let precipitation = document.querySelector("#precipitation");
 
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
   celsiusTemperature = response.data.main.temp;
+  description.innerHTML = response.data.weather.description;
+  windSpeed.innerHTML = response.data.wind.speed;
+  precipitation.innerHTML = response.data.main.humidity;
 }
 
 function searchCity(city) {
