@@ -31,12 +31,13 @@ h1 .current-button:hover {
     float: left;
     margin-left: 82px;
 }
-h1 button .current-button:hover {
+h1 .current-button:hover {
     color: rgb(165, 159, 247);
     font-size: 1.05rem;
     font-weight: 500;
     transition: all 0.2s ease;
     margin-left: 80px;
+    background-color: transparent;
 }
 
 .main-icon {
