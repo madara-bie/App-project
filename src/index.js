@@ -23,9 +23,9 @@ function showTemperature(response) {
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
   celsiusTemperature = response.data.main.temp;
-  description.innerHTML = response.data.weather[0].description;
-  windSpeed.innerHTML = response.data.wind.speed;
-  precipitation.innerHTML = response.data.main.humidity;
+  description.innerHTML = `Currently: ${response.data.weather[0].description}`;
+  windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}`;
+  precipitation.innerHTML = `Humidity: ${response.data.main.humidity}`;
 }
 
 function searchCity(city) {
