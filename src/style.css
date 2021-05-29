@@ -105,7 +105,7 @@ button {
 .weather-description p
 .wind-speed p
 .percipitation p {
-    margin-top: 3px;
+    margin: 2px auto;
     font-size: 15px;
     font-weight: 100;
 }
