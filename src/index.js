@@ -20,12 +20,13 @@ function showTemperature(response) {
   let windSpeed = document.querySelector("#wind-speed");
   let precipitation = document.querySelector("#precipitation");
 
-  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt=description);
 
   celsiusTemperature = response.data.main.temp;
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
   windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
 }
 
 function searchCity(city) {
@@ -34,6 +35,7 @@ function searchCity(city) {
   let requestUrl = apiUrl + `&q=${city}`;
   axios.get(requestUrl).then(showTemperature);
 }
+
 
 function showLocation(position) {
   let latitude = position.coords.latitude;
