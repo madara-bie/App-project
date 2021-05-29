@@ -46,6 +46,10 @@ h1 .current-button:hover {
 .main-degree {
     margin-bottom: 3px;
 }
+.units {
+    font-size: 45px;
+    text-decoration: none;
+}
 .location {
     font-size: 45px;
 }
