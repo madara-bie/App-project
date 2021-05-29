@@ -23,8 +23,7 @@ h1 {
 }
 
 h1 .current-button,
-h1 .current-button:hover
-h1 .current-button:active {
+h1 .current-button:hover {
     background-color: transparent;
     border: none;
     color: rgb(90, 88, 112);
@@ -32,16 +31,14 @@ h1 .current-button:active {
     float: left;
     margin-left: 82px;
 }
-h1 .current-button:hover {
+h1 button .current-button:hover {
     color: rgb(165, 159, 247);
     font-size: 1.05rem;
     font-weight: 500;
     transition: all 0.2s ease;
     margin-left: 80px;
 }
-h1 button:active {
-    color:rgb(165, 159, 247);
-}
+
 .main-icon {
     width: 140px;
     height: auto;
