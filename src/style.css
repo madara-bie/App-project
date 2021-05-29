@@ -38,7 +38,8 @@ h1 .current-button:hover {
     margin-left: 80px;
 }
 .main-icon {
-    height: 120px;
+    width: 120px;
+    height: auto;
 }
 .location,
 .main-degree {
