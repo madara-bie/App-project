@@ -18,8 +18,9 @@ body {
 }
 h1 {
     font-weight: 100;
-    font-size: 45px;
+    font-size: 35px;
 }
+
 h1 .current-button,
 h1 .current-button:hover {
     background-color: transparent;
@@ -42,10 +43,10 @@ h1 .current-button:hover {
 .location,
 .main-degree {
     font-weight: 500;
-    font-size: 45px;
 }
 .main-degree {
     margin-bottom: 3px;
+    font-size: 50px;
 }
 .units a {
     font-size: 25px;
@@ -53,7 +54,7 @@ h1 .current-button:hover {
     font-weight: 300;
 }
 .location {
-    font-size: 45px;
+    font-size: 35px;
 }
 .current-time {
     font-size: 25px;
