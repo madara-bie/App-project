@@ -56,7 +56,7 @@ function updateCurrentTime() {
     minute = `0${minute}`;
   }
 
-  document.querySelector(".current-time").innerHTML = `Currently it is  ${dayOfWeek}, ${hour}:${minute}`;
+  document.querySelector(".current-time").innerHTML = `Last updated:  ${dayOfWeek}, ${hour}:${minute}`;
 }
 
 function showFahrenheitTemperature(event) {
