@@ -22,7 +22,7 @@ function showTemperature(response) {
   let smallIcons = document.querySelector("#small-icons");
 
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt=description);
-  smallIcons.setAttribute("src", `http://openweathermap.org/img/wn/10d@2x.png`);
+  smallIcons.setAttribute("src", `https://openweathermap.org/img/wn/10d@2x.png`);
 
   celsiusTemperature = response.data.main.temp;
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
