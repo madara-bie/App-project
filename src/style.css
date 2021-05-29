@@ -56,6 +56,7 @@ h1 .current-button:hover {
 }
 .location {
     font-size: 35px;
+    margin-bottom: 10px;
 }
 .current-time {
     font-size: 25px;
