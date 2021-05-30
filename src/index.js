@@ -93,4 +93,4 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("London");
 updateCurrentTime();
-showTemperature(currentTemp.innerHTML);
+showTemperature(response.data.main.temp);
