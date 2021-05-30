@@ -11,8 +11,8 @@ function showCity(event) {
 
 function showTemperature(response) {
   let currentTemp = document.querySelector("#current-temp");
-  let roundedTemp = Math.round(celsiusTemperature);
-  currentTemp.innerHTML = `${roundedTemp}°C`;
+  let temperatureElement = Math.round(celsiusTemperature);
+  currentTemp.innerHTML = `${temperatureElement}°C`;
   updateCityName(response.data.name);
   let iconElement = document.querySelector("#icon");
   let description = document.querySelector("#description");
@@ -22,6 +22,8 @@ function showTemperature(response) {
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt=description);
 
   celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
   windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
