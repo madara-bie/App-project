@@ -22,7 +22,7 @@ function showTemperature(response) {
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt=description);
 
   celsiusTemperature = response.data.main.temp;
-  
+
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
   windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -42,7 +42,7 @@ function showLocation(position) {
   let apiId = "d547f7175aa4839fd00918dad2121b28";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=524901&appid=${apiId}&units=metric`;
   let requestUrl = apiUrl + `&lat=${latitude}&lon=${longitude}`;
-  axios.get(requestUrl).then(showTemperature);
+  //axios.get(requestUrl).then(showTemperature);
 }
 
 function showCurrentLocation() {
