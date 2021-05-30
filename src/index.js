@@ -38,7 +38,7 @@ function searchCity(city) {
 }
 function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector(".locationt");
+  let cityInputElement = document.querySelector(".location");
   searchCity(cityInputElement.value);
 }
 function showLocation(position) {
