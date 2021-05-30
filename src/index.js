@@ -2,12 +2,14 @@ function updateCityName(city) {
   let location = document.querySelector("#location");
   location.innerHTML = city;
 }
+console.log(updateCityName);
 
 function showCity(event) {
   event.preventDefault();
   let city = document.querySelector("#input-city").value;
   searchCity(city);
 }
+console.log(showCity);
 
 function showTemperature(response) {
   let currentTemp = document.querySelector("#current-temp");
@@ -27,7 +29,6 @@ function showTemperature(response) {
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
   windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-
 }
 
 function searchCity(city) {
@@ -64,7 +65,7 @@ function updateCurrentTime() {
     minute = `0${minute}`;
   }
 
-  document.querySelector(".current-time").innerHTML = `Last updated:  ${dayOfWeek}, ${hour}:${minute}`;
+  document.querySelector(".current-time").innerHTML = `Last updated: ${dayOfWeek}, ${hour}:${minute}`;
 }
 
 function showFahrenheitTemperature(event) {
