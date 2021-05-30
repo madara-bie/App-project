@@ -91,4 +91,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("London");
+showDefault(`https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiId}`);
 updateCurrentTime();
