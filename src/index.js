@@ -42,7 +42,7 @@ function showLocation(position) {
   let apiId = "d547f7175aa4839fd00918dad2121b28";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=524901&appid=${apiId}&units=metric`;
   let requestUrl = apiUrl + `&lat=${latitude}&lon=${longitude}`;
-  //axios.get(requestUrl).then(showTemperature);
+  axios.get(requestUrl).then(showTemperature);
 }
 
 function showCurrentLocation() {
