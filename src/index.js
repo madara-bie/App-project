@@ -42,6 +42,12 @@ function searchCity(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
 
 function showLocation(position) {
   let latitude = position.coords.latitude;
