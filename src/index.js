@@ -92,5 +92,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("London");
-showTemperature(celsiusTemperature);
+showTemperature(response.data.main.temp);
 updateCurrentTime();
