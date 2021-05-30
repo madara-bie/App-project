@@ -30,6 +30,7 @@ function showTemperature(response) {
   windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 }
+console.log(showTemperature);
 
 function searchCity(city) {
   let apiId = "d547f7175aa4839fd00918dad2121b28";
@@ -37,6 +38,7 @@ function searchCity(city) {
   let requestUrl = apiUrl + `&q=${city}`;
   axios.get(requestUrl).then(showTemperature);
 }
+console.log(searchCity);
 
 function showLocation(position) {
   let latitude = position.coords.latitude;
@@ -46,7 +48,7 @@ function showLocation(position) {
   let requestUrl = apiUrl + `&lat=${latitude}&lon=${longitude}`;
   axios.get(requestUrl).then(showTemperature);
 }
-
+console.log(showLocation);
 function showCurrentLocation() {
   navigator.geolocation.getCurrentPosition(showLocation);
 }
@@ -67,6 +69,7 @@ function updateCurrentTime() {
 
   document.querySelector(".current-time").innerHTML = `Last updated: ${dayOfWeek}, ${hour}:${minute}`;
 }
+console.log(updateCurrentTime);
 
 function showFahrenheitTemperature(event) {
   event.preventDefault();
@@ -74,6 +77,7 @@ function showFahrenheitTemperature(event) {
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = `${Math.round(fahrenheitTemperature)}°F`;
 }
+console.log(showFahrenheitTemperature);
 
 function showCelsiusTemperature(event) {
   event.preventDefault();
@@ -81,7 +85,7 @@ function showCelsiusTemperature(event) {
   temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°C`;
 }
 let celsiusTemperature = null;
-
+console.log(showCelsiusTemperature);
 
 document.querySelector("#show-current").addEventListener("click", showCurrentLocation);
 document.querySelector("#search-form").addEventListener("submit", showCity);
@@ -94,3 +98,4 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("London");
 updateCurrentTime();
+console.log();
