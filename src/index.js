@@ -37,12 +37,6 @@ function searchCity(city) {
   axios.get(requestUrl).then(showTemperature);
 }
 
-function handleSubmit(event) {
-  event.preventDefault();
-  let cityInputElement = document.querySelector(".location");
-  search(cityInputElement.value);
-}
-
 function showLocation(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -97,5 +91,5 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
-search("London");
+searchCity("London");
 updateCurrentTime();
