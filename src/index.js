@@ -14,7 +14,7 @@ function showTemperature(response) {
   let currentTemp = document.querySelector("#current-temp");
   let roundedTemp = Math.round(celsiusTemperature);
   currentTemp.innerHTML = `${roundedTemp}°C`;
-  updateCityName(response.data.main.name);
+  updateCityName(response.data.name);
   let iconElement = document.querySelector("#icon");
   let description = document.querySelector("#description");
   let windSpeed = document.querySelector("#wind-speed");
