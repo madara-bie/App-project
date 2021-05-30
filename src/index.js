@@ -1,8 +1,6 @@
 function updateCityName(city) {
   let location = document.querySelector("#location");
   location.innerHTML = city;
-  let temperatureElement = Math.round(celsiusTemperature);
-  currentTemp.innerHTML = `${temperatureElement}°C`;
 }
 
 function showCity(event) {
