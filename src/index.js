@@ -83,7 +83,7 @@ function showCelsiusTemperature(event) {
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°C`;
 }
-//let celsiusTemperature = null;
+let celsiusTemperature = null;
 
 
 document.querySelector("#show-current").addEventListener("click", showCurrentLocation);
