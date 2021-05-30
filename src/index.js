@@ -83,7 +83,7 @@ function showCelsiusTemperature(event) {
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°C`;
 }
-let celsiusTemperature = null;
+//let celsiusTemperature = null;
 
 
 document.querySelector("#show-current").addEventListener("click", showCurrentLocation);
@@ -95,5 +95,5 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
-searchCity("London").then(showTemperature);
+searchCity("London");
 updateCurrentTime();
