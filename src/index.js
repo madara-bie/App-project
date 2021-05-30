@@ -10,7 +10,6 @@ function showCity(event) {
 }
 
 function showTemperature(response) {
-  console.log(response);
   let currentTemp = document.querySelector("#current-temp");
   let roundedTemp = Math.round(celsiusTemperature);
   currentTemp.innerHTML = `${roundedTemp}°C`;
@@ -97,4 +96,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("London");
+showTemperature();
 updateCurrentTime();
