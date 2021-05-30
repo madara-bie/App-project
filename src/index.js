@@ -22,8 +22,7 @@ function showTemperature(response) {
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt=description);
 
   celsiusTemperature = response.data.main.temp;
-
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+;
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
   windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
