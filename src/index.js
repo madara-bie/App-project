@@ -48,6 +48,8 @@ function showLocation(position) {
 function showCurrentLocation() {
   navigator.geolocation.getCurrentPosition(showLocation);
 }
+console.log(showTemperature);
+console.log(position);
 
 function updateCurrentTime() {
   let now = new Date();
