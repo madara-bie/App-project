@@ -13,11 +13,12 @@ function showTemperature(response) {
   let currentTemp = document.querySelector("#current-temp");
   let temperatureElement = Math.round(celsiusTemperature);
   currentTemp.innerHTML = `${temperatureElement}°C`;
-  updateCityName(response.data.name);
   let iconElement = document.querySelector("#icon");
   let description = document.querySelector("#description");
   let windSpeed = document.querySelector("#wind-speed");
   let precipitation = document.querySelector("#precipitation");
+
+  updateCityName(response.data.name);
 
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt=description);
 
@@ -92,3 +93,4 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("London");
 updateCurrentTime();
+showTemperature(currentTemp.innerHTML);
