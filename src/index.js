@@ -29,11 +29,16 @@ function showTemperature(response) {
 
 }
 
-function searchCity(city) {
+/*function searchCity(city) {
   let apiId = "d547f7175aa4839fd00918dad2121b28";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=524901&appid=${apiId}&units=metric`;
   let requestUrl = apiUrl + `&q=${city}`;
   axios.get(requestUrl).then(showTemperature);
+}*/
+function searchCity(city) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
 }
 
 
