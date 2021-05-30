@@ -98,4 +98,4 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("London");
 updateCurrentTime();
-console.log();
+console.log(searchCity);
