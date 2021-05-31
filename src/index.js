@@ -10,8 +10,9 @@ function showCity(event) {
   searchCity(city);
 }
 console.log(showCity);
-
+/*
 function showTemperature(response) {
+  celsiusTemperature = response.data.main.temp;
   let currentTemp = document.querySelector("#current-temp");
   let temperatureElement = Math.round(celsiusTemperature);
   currentTemp.innerHTML = `${temperatureElement}°C`;
@@ -19,12 +20,29 @@ function showTemperature(response) {
   let description = document.querySelector("#description");
   let windSpeed = document.querySelector("#wind-speed");
   let precipitation = document.querySelector("#precipitation");
-
   updateCityName(response.data.name);
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+    (alt = description)
+  );
+  description.innerHTML = `Currently: ${response.data.weather[0].description}`;
+  windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
+  precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+}
+*/
 
-  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt=description);
-
+function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
+  let currentTemp = document.querySelector("#current-temp");
+  let temperatureElement = Math.round(celsiusTemperature);
+  currentTemp.innerHTML = `${temperatureElement}°C`;
+  let iconElement = document.querySelector("#icon");
+  let description = document.querySelector("#description");
+  let windSpeed = document.querySelector("#wind-speed");
+  let precipitation = document.querySelector("#precipitation");
+  updateCityName(response.data.name);
+  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt = description);
 
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
   windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
@@ -59,8 +77,11 @@ function updateCurrentTime() {
   let dayOfWeek = days[now.getDay()];
   let hour = now.getHours();
   if (hour < 10) {
-    hours = `0${hours}`; 
-  }
+    hour = `0${hours}`; 
+  /*}
+   if (hour < 10) {
+    hour = `0${hour}`;
+  }*/
 
   let minute = now.getMinutes();
   if (minute < 10) {
