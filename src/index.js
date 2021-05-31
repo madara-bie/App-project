@@ -76,12 +76,9 @@ function updateCurrentTime() {
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let dayOfWeek = days[now.getDay()];
   let hour = now.getHours();
-  if (hour < 10) {
-    hour = `0${hours}`; 
-  /*}
    if (hour < 10) {
     hour = `0${hour}`;
-  }*/
+  }
 
   let minute = now.getMinutes();
   if (minute < 10) {
@@ -119,4 +116,3 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("London");
 updateCurrentTime();
-console.log(searchCity);
