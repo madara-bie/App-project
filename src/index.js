@@ -93,5 +93,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("London");
-showForecast();
 updateCurrentTime();
+showForecast();
