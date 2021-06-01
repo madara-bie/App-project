@@ -26,6 +26,12 @@ function showTemperature(response) {
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 }
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = "Forecast";
+
+}
+
 function searchCity(city) {
   let apiId = "d547f7175aa4839fd00918dad2121b28";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=524901&appid=${apiId}&units=metric`;
@@ -87,4 +93,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("London");
+showForecast();
 updateCurrentTime();
