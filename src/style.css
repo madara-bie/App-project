@@ -80,7 +80,7 @@ h1 .current-button:active {
 }
 .weather-forecast-min {
     font-size: 19px;
-    color:rgba(255, 255, 255, 0.521);
+    color:rgba(147, 156, 170, 0.521);
 }
 ul li {
     list-style: none;
