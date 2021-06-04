@@ -26,11 +26,12 @@ function showTemperature(response) {
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 }
 
-/*function showForecast() {
+function showForecast() {
   let forecastElement = document.querySelector("#forecast");
   
+  forecastElement.innerHTML = "Forecast";
 
-}*/
+}
 
 function searchCity(city) {
   let apiId = "d547f7175aa4839fd00918dad2121b28";
@@ -94,3 +95,4 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("London");
 updateCurrentTime();
+showForecast();
