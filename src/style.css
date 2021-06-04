@@ -74,6 +74,14 @@ h1 .current-button:active {
 .small-icons {
     height: 80px;
 }
+.weather-forecast {
+    margin-top: 20px;
+    text-align: center;
+}
+.weather-forecast-date {
+    margin: 5px auto 10px auto;
+    font-size: 22px;
+}
 
 .weather-forecast-max {
     font-size: 22px;
@@ -88,13 +96,7 @@ ul li {
 .col-2-3 form {
     display: block;
 }
-.weather-forecast {
-    margin-top: 20px;
-    text-align: center;
-}
-.weather-forecast-date {
-    margin: 5px auto 10px auto;
-}
+
 /*.weather-forecast ul li {
     display: inline-block;
     margin: 52px 25px auto auto;
