@@ -91,7 +91,9 @@ ul li {
 .weather-forecast {
     margin-top: 20px;
     text-align: center;
-
+}
+.weather-forecast-date {
+    margin: 5px auto 10px auto;
 }
 /*.weather-forecast ul li {
     display: inline-block;
