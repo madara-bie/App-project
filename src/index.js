@@ -29,7 +29,24 @@ function showTemperature(response) {
 function showForecast() {
   let forecastElement = document.querySelector("#forecast");
   
-  forecastElement.innerHTML = "Forecast";
+  forecastElement.innerHTML = `
+  <div class="weather-forecast" id="forecast">
+    <div class="row">
+      <div class="col-2">
+        <div class="weather-forecast-date">Thu</div>
+          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+          div class="weather-forecast-temperatures">
+            <span class="weather-forecast-max">
+              18°
+            </span>
+            <span class="weather-forecast-min">
+              15°
+            </span>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>`;
 
 }
 
