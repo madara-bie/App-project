@@ -88,10 +88,10 @@ ul li {
 .col-2-3 form {
     display: block;
 }
-.week {
+.weather-forecast {
     margin: 10px auto;
 }
-.week ul li {
+.weather-forecast ul li {
     display: inline-block;
     margin: 52px 25px auto auto;
     text-align: center;
