@@ -89,9 +89,11 @@ ul li {
     display: block;
 }
 .weather-forecast {
-    margin: 10px auto;
+    margin-top: 20px;
+    text-align: center;
+
 }
-.weather-forecast ul li {
+/*.weather-forecast ul li {
     display: inline-block;
     margin: 52px 25px auto auto;
     text-align: center;
@@ -104,7 +106,7 @@ ul li {
 }
 .col-sm {
     width: 120px;
-}
+}*/
 form {
     margin-left: 45%;
     margin-top: 100px;
