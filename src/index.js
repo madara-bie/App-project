@@ -32,11 +32,9 @@ function showForecast() {
   forecastElement.innerHTML = `
     <div class="row">
       <div class="col-2">
-        <div class="weather-forecast-date">
-          Thu
-        </div>
+        <div class="weather-forecast-date">Thu</div>
           <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
-        div class="weather-forecast-temperatures">
+        <div class="weather-forecast-temperatures">
             <span class="weather-forecast-max">
               18°
             </span>
