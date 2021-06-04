@@ -28,7 +28,7 @@ function showTemperature(response) {
 
 function showForecast() {
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = "Forecast";
+  
 
 }
 
@@ -94,4 +94,3 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("London");
 updateCurrentTime();
-showForecast();
