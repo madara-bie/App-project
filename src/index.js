@@ -10,7 +10,7 @@ function showCity(event) {
 }
 
 function showForecast(response) {
-  console.log(response.data);
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
