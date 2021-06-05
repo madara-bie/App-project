@@ -62,7 +62,7 @@ function showTemperature(response) {
   if (celsiusTemperature < 0) {
     currentTemp.innerHTML = `-${temperatureElement}°C`;
   }
-  currentTemp.innerHTML = `${temperatureElement}°C`;
+  //currentTemp.innerHTML = `${temperatureElement}°C`;
   let iconElement = document.querySelector("#icon");
   let description = document.querySelector("#description");
   let windSpeed = document.querySelector("#wind-speed");
