@@ -27,7 +27,7 @@ function showForecast(response) {
       forecastHTML = forecastHTML + `
       <div class="col-2">
         <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-          <<img src="../App-project/icons/${forecastDay.weather[0].icon}.png" width="50px" /> alt="">
+          <img src="../App-project/icons/${forecastDay.weather[0].icon}.png" width="50px" /> alt="">
         <div class="weather-forecast-temperatures">
             <span class="weather-forecast-max">
               ${Math.round(forecastDay.temp.max)}°
