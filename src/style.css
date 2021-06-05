@@ -129,10 +129,7 @@ button {
     display: block;
 }
 
-.git-hub {
-    display: inline-block;
-}
-.git-hub a {
+.git-hub a p {
     text-decoration: none;
-    color:rgb(119, 73, 113);
+    display: flex;
 }
