@@ -11,6 +11,9 @@ function showCity(event) {
 
 function getForecast(coordinates) {
   console.log(coordinates);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiId}&units-metric`;
+  let apiId = "d547f7175aa4839fd00918dad2121b28";
+  console.log(apiUrl);
 }
 
 function showTemperature(response) {
