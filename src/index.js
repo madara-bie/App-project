@@ -18,6 +18,7 @@ function formatDay(timestamp) {
 }
 
 function showForecast(response) {
+  console.log(showForecast);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
@@ -29,14 +30,15 @@ function showForecast(response) {
           <img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="">
         <div class="weather-forecast-temperatures">
             <span class="weather-forecast-max">
-              ${forecastDay.temp.max}°
+              ${Math.round(forecastDay.temp.max)}°
             </span>
             <span class="weather-forecast-min">
-              ${forecastDay.temp.min}°
+              ${Math.round(forecastDay.temp.min)}°
             </span>
         </div>
       </div>`;
   });
+  
   
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
