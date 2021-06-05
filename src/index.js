@@ -29,7 +29,7 @@ function showTemperature(response) {
 function showForecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let forecastHTML = forecastHTML + `
+  forecastHTML = forecastHTML + `
       <div class="col-2">
         <div class="weather-forecast-date">Thu</div>
           <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
