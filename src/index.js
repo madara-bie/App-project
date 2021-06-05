@@ -29,20 +29,8 @@ function showTemperature(response) {
 function showForecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  forecastHTML = forecastHTML + `
-      <div class="col-2">
-        <div class="weather-forecast-date">Thu</div>
-          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
-        <div class="weather-forecast-temperatures">
-            <span class="weather-forecast-max">
-              18°
-            </span>
-            <span class="weather-forecast-min">
-              15°
-            </span>
-        </div>
-      </div>`;
-
+  let days = ["Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
     forecastHTML = forecastHTML + `
       <div class="col-2">
         <div class="weather-forecast-date">Thu</div>
@@ -56,6 +44,8 @@ function showForecast() {
             </span>
         </div>
       </div>`;
+  });
+  
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
