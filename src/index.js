@@ -9,13 +9,6 @@ function showCity(event) {
   searchCity(city);
 }
 
-function getForecast(coordinates) {
-  console.log(coordinates);
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiId}&units-metric`;
-  let apiId = "d547f7175aa4839fd00918dad2121b28";
-  console.log(apiUrl);
-}
-
 function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   let currentTemp = document.querySelector("#current-temp");
@@ -33,6 +26,13 @@ function showTemperature(response) {
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 
   getForecast(response.data.coord);
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiId}&units-metric`;
+  let apiId = "d547f7175aa4839fd00918dad2121b28";
+  console.log(apiUrl);
 }
 
 function showForecast() {
