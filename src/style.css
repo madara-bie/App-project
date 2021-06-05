@@ -94,7 +94,7 @@ h1 .current-button:active {
     margin: 5px 5px 10px auto;
     display: inline-block;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.521);
+    background-color: rgba(255, 255, 255, 0.205);
     border-radius: 10px;
     box-shadow: rgba(168, 168, 168, 0.08) 0px 8px 8px 0;
     width: 100px;
