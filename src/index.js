@@ -10,21 +10,21 @@ function showCity(event) {
 }
 
 function showForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML = forecastHTML + `
       <div class="col-2">
-        <div class="weather-forecast-date">${day}</div>
-          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+        <div class="weather-forecast-date">${forecastDay.dt}</div>
+          <img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="">
         <div class="weather-forecast-temperatures">
             <span class="weather-forecast-max">
-              18°
+              ${forecastDay.temp.max}°
             </span>
             <span class="weather-forecast-min">
-              15°
+              ${forecastDay.temp.min}°
             </span>
         </div>
       </div>`;
