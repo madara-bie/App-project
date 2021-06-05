@@ -56,6 +56,12 @@ function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   let currentTemp = document.querySelector("#current-temp");
   let temperatureElement = Math.round(celsiusTemperature);
+  if (celsiusTepmerature > 0) {
+    currentTemp.innerHTML = `+${temperatureElement}°C`;
+  }
+  if (celsiusTemperature < 0) {
+    currentTemp.innerHTML = `-${temperatureElement}°C`;
+  }
   currentTemp.innerHTML = `${temperatureElement}°C`;
   let iconElement = document.querySelector("#icon");
   let description = document.querySelector("#description");
