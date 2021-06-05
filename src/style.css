@@ -22,8 +22,8 @@ h1 {
     padding-top: 10px;
 }
 
-h1 .current-button,
-h1 .current-button:hover {
+h1 .current-button button,
+h1 .current-button button:hover {
     background-color: transparent;
     color: rgb(110, 110, 110);
     border: none;
@@ -31,7 +31,7 @@ h1 .current-button:hover {
     float: left;
     margin-left: 50px;
 }
-h1 .current-button:hover {
+h1 .current-button button:hover {
     font-size: 1.05rem;
     color: rgb(110, 110, 110);
     font-weight: 500;
@@ -39,8 +39,8 @@ h1 .current-button:hover {
     margin-left: 48px;
     background-color: transparent;
 }
-h1 .current-button:active,
-h1 button:active {
+h1 .current-button button:active,
+h1 button button:active {
     background-color: transparent !important;
     font-size: 1.05rem;
     color: rgb(184, 184, 184);
