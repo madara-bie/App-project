@@ -25,6 +25,7 @@ h1 {
 h1 .current-button,
 h1 .current-button:hover {
     background-color: transparent;
+    color: rgb(110, 110, 110);
     border: none;
     display: flex;
     float: left;
@@ -32,6 +33,7 @@ h1 .current-button:hover {
 }
 h1 .current-button:hover {
     font-size: 1.05rem;
+    color: rgb(110, 110, 110);
     font-weight: 500;
     transition: all 0.2s ease;
     margin-left: 48px;
