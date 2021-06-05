@@ -33,7 +33,7 @@ function showForecast() {
   days.forEach(function (day) {
     forecastHTML = forecastHTML + `
       <div class="col-2">
-        <div class="weather-forecast-date">Thu</div>
+        <div class="weather-forecast-date">${day}</div>
           <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
         <div class="weather-forecast-temperatures">
             <span class="weather-forecast-max">
