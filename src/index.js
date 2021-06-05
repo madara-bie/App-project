@@ -29,7 +29,7 @@ function showTemperature(response) {
 function showForecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Sun", "Mon", "Tue"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
   days.forEach(function (day) {
     forecastHTML = forecastHTML + `
       <div class="col-2">
