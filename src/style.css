@@ -27,6 +27,11 @@ body {
     background-color: rgb(124, 100, 139);
     border-style: none;
 }
+.btn-primary:focus { 
+  outline: none;
+  box-shadow: none;
+  background-color: rgb(124, 100, 139); 
+}
 h1 {
     font-weight: 100;
     font-size: 35px;
