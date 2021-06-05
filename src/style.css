@@ -97,7 +97,7 @@ h1 .current-button:active {
     background-color: rgba(255, 255, 255, 0.205);
     border-radius: 10px;
     box-shadow: rgba(168, 168, 168, 0.08) 0px 8px 8px 0;
-    width: 100px;
+    width: 125px;
 }
 
 .col-2-3 form {
