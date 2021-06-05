@@ -9,6 +9,13 @@ function showCity(event) {
   searchCity(city);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+
+  return day;
+}
+
 function showForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -17,7 +24,7 @@ function showForecast(response) {
   forecast.forEach(function (forecastDay) {
     forecastHTML = forecastHTML + `
       <div class="col-2">
-        <div class="weather-forecast-date">${forecastDay.dt}</div>
+        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
           <img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="">
         <div class="weather-forecast-temperatures">
             <span class="weather-forecast-max">
@@ -55,7 +62,7 @@ function showTemperature(response) {
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt = description);
 
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
-  windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
+  windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}m/s`;
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 
   getForecast(response.data.coord);
