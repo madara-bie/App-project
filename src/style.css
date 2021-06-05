@@ -83,6 +83,10 @@ h1 .current-button:active {
     font-size: 20px;
 }
 
+.weather-forecast-temperatures span {
+    text-align: center;
+}
+
 .weather-forecast-max {
     font-size: 20px;
 }
