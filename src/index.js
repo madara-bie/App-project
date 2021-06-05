@@ -21,20 +21,6 @@ function showForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let maxTemp = forecastDay.temp.max;
-  let minTemp = forecastDay.temp.min;
-  if (maxTemp > 0) {
-    maxTemp.innerHTML = `+${forecastDay.temp.max}`;
-  }
-  if (maxTemp < 0) {
-    maxTemp.innerHTML = `-${forecastDay.temp.max}`;
-  }
-  if (minTemp > 0) {
-    maxTemp.innerHTML = `+${forecastDay.temp.min}`;
-  }
-  if (maxTemp < 0) {
-    minTemp.innerHTML = `-${forecastDay.temp.min}`;
-  }
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
@@ -44,10 +30,10 @@ function showForecast(response) {
           <img src="../icons/${forecastDay.weather[0].icon}.png" alt="" class="small-icons">
         <div class="weather-forecast-temperatures">
             <span class="weather-forecast-max">
-              ${Math.round(maxTemp)}°
+              ${Math.round(forecastDay.temp.max)}°
             </span>
             <span class="weather-forecast-min">
-              ${Math.round(minTemp)}°
+              ${Math.round(forecastDay.temp.min)}°
             </span>
         </div>
       </div>`;
