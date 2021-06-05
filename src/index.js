@@ -56,7 +56,7 @@ function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   let currentTemp = document.querySelector("#current-temp");
   let temperatureElement = Math.round(celsiusTemperature);
-  if (celsiusTepmerature > 0) {
+  if (celsiusTemperature > 0) {
     currentTemp.innerHTML = `+${temperatureElement}°C`;
   }
   if (celsiusTemperature < 0) {
