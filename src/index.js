@@ -41,8 +41,7 @@ function showForecast() {
               15°
             </span>
         </div>
-      </div>
-    </div>`;
+      </div>`;
 
     forecastHTML = forecastHTML + `
       <div class="col-2">
@@ -56,8 +55,7 @@ function showForecast() {
               15°
             </span>
         </div>
-      </div>
-    </div>`;
+      </div>`;
     forecastHTML = `</div>`;
   forecastElement.innerHTML = forecastHTML;
 
