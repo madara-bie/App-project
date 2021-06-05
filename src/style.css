@@ -26,13 +26,12 @@ h1 .current-button,
 h1 .current-button:hover {
     background-color: transparent;
     border: none;
-    color: rgb(90, 88, 112);
+    color: rgb(110, 110, 110);
     display: flex;
     float: left;
     margin-left: 50px;
 }
 h1 .current-button:hover {
-    color: rgb(165, 159, 247);
     font-size: 1.05rem;
     font-weight: 500;
     transition: all 0.2s ease;
@@ -41,11 +40,12 @@ h1 .current-button:hover {
 }
 h1 .current-button:active,
 h1 .btn,
-h1 .btn-primary {
+h1 .btn-primary,
+h1 button {
     background-color: transparent;
     font-size: 1.05rem;
-    color: rgb(165, 159, 247);
-
+    color: rgb(184, 184, 184);
+    border-color: transparent;
 }
 
 .main-icon {
