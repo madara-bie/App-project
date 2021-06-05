@@ -9,32 +9,6 @@ function showCity(event) {
   searchCity(city);
 }
 
-function showTemperature(response) {
-  celsiusTemperature = response.data.main.temp;
-  let currentTemp = document.querySelector("#current-temp");
-  let temperatureElement = Math.round(celsiusTemperature);
-  currentTemp.innerHTML = `${temperatureElement}°C`;
-  let iconElement = document.querySelector("#icon");
-  let description = document.querySelector("#description");
-  let windSpeed = document.querySelector("#wind-speed");
-  let precipitation = document.querySelector("#precipitation");
-  updateCityName(response.data.name);
-  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt = description);
-
-  description.innerHTML = `Currently: ${response.data.weather[0].description}`;
-  windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
-  precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-
-  getForecast(response.data.coord);
-}
-
-function getForecast(coordinates) {
-  console.log(coordinates);
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiId}&units-metric`;
-  let apiId = "d547f7175aa4839fd00918dad2121b28";
-  console.log(apiUrl);
-}
-
 function showForecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
@@ -57,6 +31,32 @@ function showForecast() {
   
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiId}&units-metric`;
+  let apiId = "d547f7175aa4839fd00918dad2121b28";
+  console.log(apiUrl);
+}
+
+function showTemperature(response) {
+  celsiusTemperature = response.data.main.temp;
+  let currentTemp = document.querySelector("#current-temp");
+  let temperatureElement = Math.round(celsiusTemperature);
+  currentTemp.innerHTML = `${temperatureElement}°C`;
+  let iconElement = document.querySelector("#icon");
+  let description = document.querySelector("#description");
+  let windSpeed = document.querySelector("#wind-speed");
+  let precipitation = document.querySelector("#precipitation");
+  updateCityName(response.data.name);
+  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt = description);
+
+  description.innerHTML = `Currently: ${response.data.weather[0].description}`;
+  windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
+  precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
