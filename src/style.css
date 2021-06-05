@@ -18,8 +18,14 @@ body {
     border-radius: 10px;
     box-shadow: rgba(168, 168, 168, 0.08) 0px 8px 8px 0;
 }
-.btn-primary {
+.btn .btn-primary {
     background-color: rgb(163, 134, 182);
+    border-style: none;
+}
+.btn .btn-primary:hover {
+    background-color: rgb(124, 100, 139);
+    border-style: none;
+
 }
 h1 {
     font-weight: 100;
