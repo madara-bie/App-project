@@ -128,3 +128,11 @@ button {
     width: 100%;
     display: block;
 }
+
+.git-hub {
+    display: inline-block;
+}
+.git-hub a {
+    text-decoration: none;
+    color:rgb(119, 73, 113);
+}
