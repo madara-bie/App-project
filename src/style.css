@@ -78,8 +78,10 @@ h1 button:active {
 .small-icons {
     height: 80px;
 }
+
 .weather-forecast {
-    margin-top: 20px;
+    display: block;
+    margin: 40px auto 30px auto;
     text-align: center;
 }
 .weather-forecast-date {
@@ -129,10 +131,6 @@ button {
     font-size: 16px
 }
 
-.weather-forecast {
-    display: block;
-    margin: 40px auto 30px auto;
-}
 .row-1-3 {
     float: left;
     margin-right: 60px;
