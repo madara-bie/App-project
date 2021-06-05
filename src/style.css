@@ -63,6 +63,7 @@ h1 button:active {
     font-size: 25px;
     text-decoration: none;
     font-weight: 300;
+    color:rgba(147, 156, 170, 0.521);
 }
 .location {
     font-size: 35px;
@@ -138,4 +139,5 @@ button {
 
 .git-hub a {
     text-decoration: none;
+    color:rgba(147, 156, 170, 0.521);
 }
