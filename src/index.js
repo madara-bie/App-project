@@ -69,7 +69,6 @@ function showTemperature(response) {
   let precipitation = document.querySelector("#precipitation");
   updateCityName(response.data.name);
   iconElement.setAttribute("src", `../icons/icons-big/${response.data.weather[0].icon}.png`, alt = description);
-  //<img src="../icons/${forecastDay.weather[0].icon}.png" alt="">
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
   windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}m/s`;
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -125,6 +124,12 @@ function showCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°C`;
+  if (celsiusTemperature > 0) {
+    temperatureElement.innerHTML = `+${Math.round(celsiusTemperature)}°C`;
+  }
+  if (celsiusTemperature < 0) {
+    temperatureElement.innerHTML = `-${Math.round(celsiusTemperature)}°C`;
+  }
 }
 let celsiusTemperature = null;
 
