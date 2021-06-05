@@ -80,19 +80,20 @@ h1 .current-button:active {
 }
 .weather-forecast-date {
     margin: 5px auto 10px auto;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .weather-forecast-max {
-    font-size: 22px;
+    font-size: 20px;
 }
 .weather-forecast-min {
     font-size: 19px;
     color:rgba(147, 156, 170, 0.521);
 }
-ul li {
-    list-style: none;
+.col-2 {
+    margin: 5px auto 10px auto;
 }
+
 .col-2-3 form {
     display: block;
 }
@@ -105,7 +106,7 @@ ul li {
     border-radius: 10px;
     box-shadow: rgba(168, 168, 168, 0.08) 0px 8px 8px 0;
 }
-.days {
+.col-2 {
     margin: 5px auto 10px auto;
 }
 .col-sm {
