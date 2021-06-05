@@ -62,7 +62,7 @@ function showTemperature(response) {
   let windSpeed = document.querySelector("#wind-speed");
   let precipitation = document.querySelector("#precipitation");
   updateCityName(response.data.name);
-  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, alt = description);
+  iconElement.setAttribute("src", `<img src="../icons/${response.data.weather[0].icon}.png"/>`, alt = description);
   //<img src="../icons/${forecastDay.weather[0].icon}.png" alt="">
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
   windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}m/s`;
