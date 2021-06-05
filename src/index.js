@@ -9,6 +9,10 @@ function showCity(event) {
   searchCity(city);
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+}
+
 function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   let currentTemp = document.querySelector("#current-temp");
@@ -24,6 +28,8 @@ function showTemperature(response) {
   description.innerHTML = `Currently: ${response.data.weather[0].description}`;
   windSpeed.innerHTML = `Wind speed: ${response.data.wind.speed}km/h`;
   precipitation.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
+  getForecast(response.data.coord);
 }
 
 function showForecast() {
