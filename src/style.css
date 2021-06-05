@@ -85,6 +85,7 @@ h1 .current-button:active {
 
 .weather-forecast-temperatures span {
     text-align: center;
+    margin: 0 auto;
 }
 
 .weather-forecast-max {
