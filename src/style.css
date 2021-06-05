@@ -129,7 +129,6 @@ button {
     display: block;
 }
 
-.git-hub a p {
+.git-hub a {
     text-decoration: none;
-    display: flex;
 }
