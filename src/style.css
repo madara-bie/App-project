@@ -2,6 +2,7 @@
     font-family: 'Spartan', sans-serif;
     color: rgb(110, 110, 110);
 }
+
 body {
     background: linear-gradient(179.1deg, rgb(247, 238, 238) -1.9%, rgb(247, 202, 201) 44.9%, rgb(145, 168, 208) 96.1%);
 }
@@ -63,7 +64,7 @@ h1 button:active {
     font-size: 25px;
     text-decoration: none;
     font-weight: 300;
-    color:rgba(147, 156, 170, 0.521);
+    color:rgb(110, 110, 110);
 }
 .location {
     font-size: 35px;
@@ -139,5 +140,5 @@ button {
 
 .git-hub a {
     text-decoration: none;
-    color:rgba(147, 156, 170, 0.521);
+    color:rgb(110, 110, 110);
 }
